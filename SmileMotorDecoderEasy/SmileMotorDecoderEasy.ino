@@ -17,6 +17,9 @@
 //
 // This software is released under the MIT License.
 // http://opensource.org/licenses/mit-license.php
+//
+// V1
+// V2 2020/9/27 motor_ctrl.cpp MOTOR_SetCV() CV3,CV4の補正係数削除
 //--------------------------------------------------------------------------------
 
 #include <Arduino.h>
