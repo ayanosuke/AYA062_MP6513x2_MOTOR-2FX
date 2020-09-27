@@ -111,18 +111,14 @@ void MOTOR_SetCV(byte iNo, byte inData)
 		      gParam.mStartVoltage = inData;
 		      break;
 	  case 3:
-		      if( inData > 16){
-			      gParam.mAccRatio = 160;                   // Readjust CV3 Para set by MECY 2017/4/11
-		      } else {
-			      gParam.mAccRatio = inData * 10 ;          // Readjust CV3 Para set by MECY 2017/4/11
-		      }
+          if(inDate == 0)
+            inData = 1;
+          gParam.mAccRatio = inData;
 		      break;
 	  case 4:
-		      if( inData > 16){
-			      gParam.mDecRatio = 160;                   // Readjust CV4 Para set by MECY 2017/4/11
-		      } else {
-			      gParam.mDecRatio = inData * 10;           // Readjust CV4 Para set by MECY 2017/4/11
-		      }
+          if(inDate == 0)
+            inData = 1;
+          gParam.mDecRatio = inData;
 		      break;
 	  case 5:
 		      gParam.mMaxVoltage = inData;
